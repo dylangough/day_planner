@@ -33,7 +33,6 @@ const clock = document.getElementById('clock');
       lookUpButton.addEventListener("click", function(event) {
         event.preventDefault();
         
-        // create user object from submission
         var user = {
           nine: nine.value.trim(),
           ten: ten.value.trim(),
@@ -50,39 +49,6 @@ const clock = document.getElementById('clock');
           nineNight: nineNight.value.trim(),
           tenNight: tenNight.value.trim()
         };
-      
-        // console.log(user);
-        
-        // validate the fields
-        // if (user.firstName === "") {
-        //   displayMessage("error", "First name cannot be blank");
-        // } else if (user.lastName === "") {
-        //   displayMessage("error", "Last name cannot be blank");
-        // } else if (user.email === "") {
-        //   displayMessage("error", "Email cannot be blank");
-        // } else if (user.password === "") {
-        //   displayMessage("error", "Password cannot be blank");
-        // } else {
-        //   displayMessage("success", "Registered successfully");
-      
-          // set new submission
           localStorage.setItem("user", JSON.stringify(user));
-          
-          // get most recent submission
-          var lastUser = JSON.parse(localStorage.getItem("user"));
-          userNine.textContent = lastUser.nine;
-          userLastNameSpan.textContent = lastUser.lastName;
-          userEmailSpan.textContent = lastUser.email;
-          userPasswordSpan.textContent = lastUser.password;
-          userFirstNameSpan.textContent = lastUser.firstName;
-          userLastNameSpan.textContent = lastUser.lastName;
-          userEmailSpan.textContent = lastUser.email;
-          userPasswordSpan.textContent = lastUser.password;
-          userFirstNameSpan.textContent = lastUser.firstName;
-          userLastNameSpan.textContent = lastUser.lastName;
-          userEmailSpan.textContent = lastUser.email;
-          userPasswordSpan.textContent = lastUser.password;
-          userFirstNameSpan.textContent = lastUser.firstName;
-          userLastNameSpan.textContent = lastUser.lastName;
-        // }
+
       });
